@@ -1,4 +1,3 @@
-
 # Income Tax Optimization Tool
 
 ## 📋 Problem Statement
@@ -24,3 +23,4 @@ This tool provides a simplified, estimated tax calculation **for informational p
 2️⃣ Enter the required inputs.  
 3️⃣ Click **Calculate Tax**.  
 4️⃣ View the results on the same page.
+
