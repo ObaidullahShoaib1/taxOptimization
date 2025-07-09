@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Optimization Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-gradient">
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="icon-wrapper">
+            <svg class="calculator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="3" width="16" height="18" rx="2" ry="2"/>
+              <line x1="8" y1="8" x2="16" y2="8"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+              <line x1="8" y1="16" x2="16" y2="16"/>
+            </svg>
+          </div>
+          <h1 class="title">Income Tax Optimization Tool</h1>
+          <p class="subtitle">Optimize your tax burden across multiple individuals</p>
+        </div>
+        
+        <div class="content">
+          <div class="input-grid">
+            <div class="input-group">
+              <label for="income" class="label">
+                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Total Income (PKR)
+              </label>
+              <input
+                id="income"
+                type="number"
+                placeholder="e.g. 10,000,000"
+                class="input-field"
+              />
+            </div>
+            
+            <div class="input-group">
+              <label for="individuals" class="label">
+                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                Number of Individuals
+              </label>
+              <input
+                id="individuals"
+                type="number"
+                placeholder="e.g. 3"
+                class="input-field"
+              />
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button onclick="calculateTax()" class="btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 10l5 5 5-5"/>
+              </svg>
+              Calculate Tax
+            </button>
+            
+            <button onclick="restart()" class="btn-secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 4v6h6"/>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+              </svg>
+            </button>
+          </div>
+
+          <div id="result" class="result-card hidden">
+            <h3 class="result-title">Tax Calculation Results</h3>
+            <pre id="output" class="result-content"></pre>
+          </div>
+
+          <div class="disclaimer-card">
+            <div class="disclaimer-content">
+              <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <div>
+                <h4 class="disclaimer-title">Disclaimer</h4>
+                <p class="disclaimer-text">
+                  This tool provides an estimated tax calculation for informational purposes only and does not constitute financial advice. 
+                  Please consult a certified tax professional for accurate and personalized tax guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
